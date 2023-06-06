@@ -268,26 +268,63 @@ GLBP - CISCO -- more than one active router to load balance
 
 ```
 
-## 
+## Administrative Distance
 ```
 
+Connected             0
+Static                1
+EIGRP summary route   5
+External BGP          20
+Internal EIGRP        90
+IGRP                  100
+OSPF                  110
+IS-IS                 115
+RIP                   120
+External EIGRP        170
+Internal BGP          200
+
+```
+
+## Distance Vector
+```
+
+routing by rumor
+
+```
+
+## Link state
+```
+
+Every router knows the shortest path to eachother. Every router knows the entire topology. No communication unless theres an update
+
+```
+
+## BGP
+```
+
+Internet
+Routes by Autonomous System Number(AS)
+Advertises IP CIDER address Block
+Complicated configuration
+Slow
+Lowest number of AS Hops
+
+Attacks:
+Man in the Middle
+Black holing traffic
+Monitor and intercept traffic
+Redirect to false website
+
+Defense:
+IP prefix filtering
+BGP Sec
+Detection:
+Monitor TTL
+Increased latency
 
 
 ```
 
-## 
-```
-
-
-
-```
-
-## 
-```
-
-
-
-```
 
 ## 
 ```
