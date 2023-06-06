@@ -168,17 +168,103 @@ RFC 4862
 
 ```
 
-## 
+## Layer 2 Switching
 ```
 
+Fast Forward - Only Destination Mac
+Fragment Free - First 64 bytes
+Store & Forward - Reads entire frame and checksum to make sure its a valid frame
+
+Cam Table:
+Learn - Examining the Source MAC address
+Forward - Examining the Destination MAC
+Limited Memory (can be exploited)
+
+VLANS/IEEE 802.1Q
+Ethertype:
+0x88A8 == Standard Double Tag
+0x9100 == Non-Standard Double Tag (SUS)(Vendor Specific?)
+
+```
+
+## Spanning Tree Protocol (STP)
+```
+
+Connecting Switches Togeher
+1. Elect root Bridge
+
+2. Identify the Root ports on non-root bridge
+
+3. Identify the Designated port for each segment
+
+4. Set alternate ports to blocking state
+
+Root Port == path to root bridge
+Designated port == path to a specific switch
+
+PVSTP+(Per VLAN STP +)
+PVSTP(Per VLAN STP)
+RSTP(Rapid STP)
+
+Layer 2 Discovery Protocols:
+Cisco Discovery Protocol (CDP) - CISCO
+
+Foundry Discovery Protocol (FDP) - FOUNDARY
+
+Link Layer Discovery Protocol(LLDP) - OPEN SOURCE 
+
+```
+
+## Dynamic Trunking Protocol (DTP)
+```
+
+Trunk Ports - Communicating with devices that know will be in a VLAN (Switches/Routers)
+Access Ports - Could be on a VLAN but the HOST wouldn't know
+Access and Trunk ports can't communicate with eachother unless you use DTP and configure them as both?
+
+```
+
+## VLAN Trunking Protocol (VTP)
+```
+
+Have 1 VTP Server and multiple VTP clients
+configure server and it will configure everything else for you
+VTP server will change based on how many times a VTP thingy is configured(most changes == SERVER)
+
+```
+
+## Port Security
+```
+
+Modes:
+Shutdown - increase violation counter and shutdown port
+Restrict - Send a message and increase violation counter
+Protect - Shut the port but won't log it
+
+```
+
+## Layer 3 (Transport)
+```
+
+Routing Protocols:
+RIP
+EIGRP
+OSPF
+BGP
+
+Routed Protocols:
+IP
+APPLE TALK?
 
 
 ```
 
-## 
+## Router Redundancy
 ```
 
-
+HOT STANDBY - CISCO -- One Active router and one Standby router
+VRRP - CISCO -- same thing
+GLBP - CISCO -- more than one active router to load balance
 
 ```
 
